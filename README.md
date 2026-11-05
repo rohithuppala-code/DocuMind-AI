@@ -1,18 +1,13 @@
-# NeuroCode Studio ⚡🧠
-> **Autonomous Multi-Agent Code Intelligence, AST Refactoring, Security Auditing & Self-Healing Test Generation Platform**  
-> *Powered by Collaborative Multi-Agent Swarms, ChromaDB Vector Code Memory, Abstract Syntax Tree (AST) Static Analysis, and Hallucination Guardrails.*
+# DocuMind AI 📚⚡
+> **Autonomous Multi-Agent Academic Research, Document Intelligence & Learning Platform**  
+> *Engineered with LangChain, LangGraph, ChromaDB Vector RAG, FastAPI, and React.*
 
 ---
 
-## 🎓 Academic & Engineering Context
-Designed as a capstone-grade Computer Science & AI engineering platform, **NeuroCode Studio** tackles the core challenges of modern software engineering:
-1. **Abstract Syntax Tree (AST) Parsing & Semantic Decomposition**: Deep structural code parsing without relying solely on raw text tokens.
-2. **Algorithmic Complexity & Profiling**: Automated time & space complexity analysis ($O(1), O(\log N), O(N), O(N \log N), O(N^2), O(2^N)$), recursion depth auditing, and data structure bottleneck detection.
-3. **Cybersecurity & Vulnerability Auditing**: OWASP Top 10 detection (SQL injection, XSS, insecure deserialization, path traversal, race conditions, memory leaks).
-4. **Vector Retrieval-Augmented Generation (ChromaDB RAG)**: Semantic vector memory indexing algorithmic design patterns, optimal data structure implementations, and known vulnerability signatures.
-5. **Multi-Agent Autonomous Orchestration**: A directed pipeline of specialized agents (AST Parser, Complexity Auditor, Security Hunter, Test Synthesizer, Patch Optimizer, and Hallucination Critic).
-6. **Automated Edge-Case Test Synthesis**: Deterministic unit test generation targeting edge cases, zero-division, boundary extremes, and null safety.
-7. **Production SaaS Studio UI**: Interactive code diff viewer, AST call-graph visualizer, live streaming agent thought trace, and ChromaDB semantic memory inspector.
+## 🎓 Academic Capstone Overview
+**DocuMind AI** is an autonomous multi-agent document intelligence and accelerated learning platform built specifically for academic research papers, textbooks, and technical documentation. 
+
+Instead of simple one-shot LLM document summarizers, DocuMind AI coordinates an autonomous **LangGraph StateGraph** swarm backed by a persistent **ChromaDB vector database** to ingest, index, synthesize, and generate interactive learning tools with strict citation grounding.
 
 ---
 
@@ -20,56 +15,64 @@ Designed as a capstone-grade Computer Science & AI engineering platform, **Neuro
 
 ```mermaid
 flowchart TD
-    UserCode[("User Code Input\n(Python, JS/TS, Algorithms)")] --> Engine[NeuroCode Swarm Orchestrator]
+    UserDoc["User Document / Research Paper / Notes"] --> IngestNode["LangGraph: Document Ingestion Node\n(Recursive Splitter & Metadata Extractor)"]
     
-    subgraph MultiAgentEngine ["Autonomous Multi-Agent Swarm"]
+    subgraph StorageLayer ["Vector & Relational Storage"]
+        ChromaStore[("ChromaDB Vector Store\n(Cosine Similarity Embeddings)")]
+        SQLiteStore[("SQLite Session DB\n(History & User Studies)")]
+    end
+    
+    IngestNode --> VectorIndex["LangGraph: ChromaDB Vector Indexing Node"]
+    VectorIndex --> ChromaStore
+    
+    subgraph LangGraphWorkflow ["Autonomous LangGraph Multi-Agent Swarm"]
         direction TB
-        Agent1["Agent 1: AST & Semantic Parser"]
-        Agent2["Agent 2: Algorithmic Complexity Auditor"]
-        Agent3["Agent 3: Security & Vulnerability Hunter"]
-        Agent4["Agent 4: Automated Test Synthesizer"]
-        Agent5["Agent 5: Code Optimization & Refactoring"]
-        Agent6["Agent 6: Critic & Hallucination Guardrail"]
+        VectorIndex --> SynthNode["Agent 1: Executive Concept Synthesizer"]
+        SynthNode --> MindMapNode["Agent 2: Concept Mind-Map Generator"]
+        SynthNode --> QuizNode["Agent 3: Adaptive Quiz & MCQ Generator"]
+        SynthNode --> FlashcardNode["Agent 4: Active-Recall Flashcard Generator"]
         
-        Agent1 --> Agent2
-        Agent1 --> Agent3
-        Agent2 --> Agent5
-        Agent3 --> Agent5
-        Agent5 --> Agent4
-        Agent4 --> Agent6
+        QuizNode --> GuardrailNode["Agent 5: Citation & Grounding Guardrail"]
+        FlashcardNode --> GuardrailNode
+        MindMapNode --> GuardrailNode
+        
+        GuardrailNode -.->|Hallucination Detected / Low Score| SynthNode
     end
     
-    subgraph VectorMemory ["ChromaDB Semantic Code Memory"]
-        CodePatterns[("Algorithmic Patterns\n& Clean Code Blueprints")]
-        VulnSignatures[("OWASP & CWE\nVulnerability Signatures")]
-        TestTemplates[("Edge-Case Test\nAssertion Heuristics")]
-    end
-
-    Engine <--> MultiAgentEngine
-    MultiAgentEngine <--> VectorMemory
-    
-    subgraph StudioFrontend ["NeuroCode Interactive Studio (React + Vite + Tailwind)"]
-        StreamConsole["Live Agent Thought Stream (SSE)"]
-        DiffViewer["Interactive Side-by-Side Diff Editor"]
-        ASTVisualizer["Interactive AST & Call Graph Canvas"]
-        TestRunner["Automated Unit Test & Benchmark Panel"]
-        ChromaInspector["ChromaDB Vector Memory Inspector"]
+    subgraph ReactFrontend ["DocuMind Interactive React Studio"]
+        StreamTerminal["Live LangGraph Agent Execution Stream (SSE)"]
+        MindMapView["Interactive Concept Mind-Map Visualizer"]
+        FlashcardDeck["Interactive 3D Flip Flashcard Deck"]
+        QuizArena["Adaptive Practice Quiz Arena with Real-time Scoring"]
+        RAGChat["Grounded Q&A with ChromaDB Source Citations"]
     end
     
-    MultiAgentEngine --> StudioFrontend
+    GuardrailNode --> ReactFrontend
+    ChromaStore <--> RAGChat
 ```
 
 ---
 
 ## 🚀 Key Features
 
-- **AST-Aware Structural Code Analysis**: Parses code into an Abstract Syntax Tree to identify control flows, function signatures, nested loops, and variable bindings.
-- **Big-O Algorithmic Profiler**: Detects quadratic/exponential time complexity loops, improper data structure selections, and suggests amortized $O(1)$ / $O(N)$ alternatives.
-- **OWASP Vulnerability Scanner**: Analyzes code against Common Weakness Enumeration (CWE) and OWASP standards with severity ranking (Critical, High, Medium, Low).
-- **ChromaDB Vector Code Memory**: Semantic vector retrieval of battle-tested algorithmic implementations, design patterns, and anti-pattern mitigations.
-- **Zero-Shot Test Generation**: Automatically generates production-ready Pytest suites with edge cases, assertion coverage, and mock fixtures.
-- **Interactive Visual Diff & AST Explorer**: Real-time side-by-side comparison between original and refactored code with explanatory annotations.
-- **Full Offline Fallback + Live LLM Integration**: Operates seamlessly out-of-the-box with heuristic inference, and optionally connects to Google Gemini / OpenAI with API keys.
+1. **LangGraph Multi-Agent Orchestration**: Directed state graph with cycle reflection loops to guarantee factual fidelity and eliminate hallucinated content.
+2. **ChromaDB Vector Retrieval (RAG)**: Chunk-level semantic indexing with metadata tags (page numbers, section headings, similarity scores) for verified citations.
+3. **Interactive 3D Flip Flashcard Deck**: Automatically generates active-recall study cards with difficulty filters and progress tracking.
+4. **Adaptive Quiz Arena**: Generates multiple-choice and conceptual assessment questions with instant scorecards and detailed answer justifications.
+5. **Interactive Concept Mind-Maps**: Auto-generates visual concept hierarchies (Mermaid diagrams) breaking down complex topics into digestible components.
+6. **Grounded RAG Assistant**: Ask any follow-up question and get answers with exact source snippets and page/chunk citations from ChromaDB.
+7. **Production Full-Stack Architecture**: Built with Python 3.11, FastAPI, SSE real-time streaming, SQLite, React 19, TypeScript, and Tailwind CSS.
 
 ---
-*Built with Python 3.11, FastAPI, ChromaDB, SQLite, React 19, TypeScript, and Tailwind CSS.*
+
+## 🛠️ Tech Stack
+
+| Layer | Technologies |
+|---|---|
+| **AI & Orchestration** | LangChain, LangGraph (StateGraph), ChromaDB, Gemini/OpenAI |
+| **Backend API** | FastAPI, Python 3.11, Uvicorn, SQLite, SQLAlchemy, Pydantic v2 |
+| **Frontend UI** | React 19, Vite, TypeScript, Tailwind CSS, Lucide Icons, Mermaid.js |
+| **Testing** | Pytest, Pytest-Asyncio, HTTPX |
+
+---
+*Developed by Sivasairohith Uppala (Final Year B.Tech Computer Science)*
