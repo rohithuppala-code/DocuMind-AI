@@ -32,3 +32,4 @@ def test_langgraph_statemap_execution():
     assert len(final_state["flashcards"]) > 0
     assert "graph TD" in final_state["mindmap_mermaid"]
     assert final_state["guardrail_score"] >= 0.80
+

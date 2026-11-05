@@ -22,3 +22,4 @@ def query_vector_store(req: VectorQueryInput):
         query_text=req.query,
         n_results=req.n_results
     )
+

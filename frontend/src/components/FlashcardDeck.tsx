@@ -195,3 +195,4 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ flashcards }) => {
     </div>
   );
 };
+

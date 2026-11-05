@@ -76,3 +76,4 @@ async def stream_workflow_execution(doc_id: str):
             "X-Accel-Buffering": "no"
         }
     )
+

@@ -36,3 +36,4 @@ class ChatHistoryRecord(Base):
     bot_answer = Column(Text, nullable=False)
     citations_json = Column(Text, nullable=False)
     timestamp = Column(DateTime, default=datetime.utcnow)
+

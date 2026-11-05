@@ -16,3 +16,4 @@ def test_document_processor_chunking():
     assert "metadata" in chunks[0]
     assert chunks[0]["metadata"]["doc_id"] == "test_doc_1"
     assert chunks[0]["metadata"]["chunk_index"] == 0
+

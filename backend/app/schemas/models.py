@@ -88,3 +88,4 @@ class StreamEvent(BaseModel):
     progress: int  # 0-100
     message: str
     data: Optional[Dict[str, Any]] = None
+

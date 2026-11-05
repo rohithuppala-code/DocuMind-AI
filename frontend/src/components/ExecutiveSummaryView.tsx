@@ -106,3 +106,4 @@ export const ExecutiveSummaryView: React.FC<ExecutiveSummaryViewProps> = ({ stud
     </div>
   );
 };
+

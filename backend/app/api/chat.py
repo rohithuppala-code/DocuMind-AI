@@ -61,3 +61,4 @@ def get_chat_history(doc_id: str, db: Session = Depends(get_db)):
             "timestamp": r.timestamp
         })
     return result
+

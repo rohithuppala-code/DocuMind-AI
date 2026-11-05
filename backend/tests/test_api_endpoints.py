@@ -39,3 +39,4 @@ def test_vector_stats_endpoint():
     res = client.get("/api/vector/stats")
     assert res.status_code == 200
     assert "total_chunks_indexed" in res.json()
+

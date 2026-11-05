@@ -195,3 +195,4 @@ export const QuizArena: React.FC<QuizArenaProps> = ({ quizQuestions }) => {
     </div>
   );
 };
+

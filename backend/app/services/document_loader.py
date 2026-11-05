@@ -38,3 +38,4 @@ class DocumentProcessor:
         return "\n".join([line for line in lines if line])
 
 document_processor = DocumentProcessor()
+

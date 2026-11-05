@@ -42,3 +42,4 @@ def get_study_set(doc_id: str, db: Session = Depends(get_db)):
         guardrail=GuardrailEvaluation(**guardrail),
         created_at=record.created_at
     )
+

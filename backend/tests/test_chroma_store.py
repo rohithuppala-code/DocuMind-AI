@@ -23,3 +23,4 @@ def test_chroma_vector_indexing_and_query():
     assert len(results) > 0
     assert results[0].source_index == 0
     assert "transformer" in results[0].snippet.lower()
+

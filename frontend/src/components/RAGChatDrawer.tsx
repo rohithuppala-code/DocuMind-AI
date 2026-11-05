@@ -226,3 +226,4 @@ export const RAGChatDrawer: React.FC<RAGChatDrawerProps> = ({ docId, docTitle })
     </div>
   );
 };
+

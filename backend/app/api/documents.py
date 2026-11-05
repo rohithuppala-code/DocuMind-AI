@@ -121,3 +121,4 @@ def get_document(doc_id: str, db: Session = Depends(get_db)):
         "tags": record.tags.split(",") if record.tags else [],
         "created_at": record.created_at
     }
+
